@@ -18,20 +18,29 @@
   <body>
     <h1>Speech Emotion Classifier</h1>
     <div id="controls">
+     
+      <div id="formats">
+  
+      </div>
+      <button type="button" id="recordButton">Record</button>
+      <button type="button" id="pauseButton" disabled>Pause</button>
+      <button type="button" id="stopButton" disabled>Stop</button>
       <form action="/predict_emotion" method="post" enctype="multipart/form-data">
-      
         <label for="audioFile">Choose an audio file:</label>
         <input type="file" id="audioFile" name="file" accept=".wav, .mp3">
-        <button type="button" id="recordButton">Record</button>
-        <button type="button" id="pauseButton" disabled>Pause</button>
-        <button type="button" id="stopButton" disabled>Stop</button>
-        <button type="submit">Predict Emotion</button>
+
+      
+      <button type="submit">Predict Emotion</button>
+        
     </form>
+    
+    
     </div>
     
-    <div id="formats"></div>
+    
     <p><strong>Recordings:</strong></p>
     <ol id="recordingsList" class="center"></ol>
    
+    
   </body>
 </html>
